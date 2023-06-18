@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.overlay {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: 1s all ease-in-out;
+    z-index: 9;
+    width: 100vw;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu-bars {
+    right: 32px;
+    top: 16px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.active .bar1 {
+    transform: translateY(11px) rotate(-45deg);
+}
+
+.active .bar2 {
+    opacity: 0
+}
+
+.active .bar3 {
+    transform: translateY(-11px) rotate(45deg)
+}
+
+.menu-active {
+    transform: translateX(0)
+}
+
+.overlay ul {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    list-style: none;
+}
+
+.overlay ul li {
+    height: 25%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.overlay ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.overlay ul li:nth-of-type(1) {
+    background: blue;
+}
+
+.overlay ul li:nth-of-type(2) {
+    background: red;
+}
+
+.overlay ul li:nth-of-type(3) {
+    background: green;
+}
+
+.overlay ul li:nth-of-type(4) {
+    background-color: orange;
+}
+
+.slide-in-1 {
+    animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2 {
+    animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+    animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+    animation: slide-in 0.4s linear 0.8s both;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100vw)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
+
+.slide-out-1 {
+    animation: slide-out 0.4s linear 0.8s both;
+}
+
+.slide-out-2 {
+    animation: slide-out 0.4s linear 0.6s both;
+}
+
+.slide-out-3 {
+    animation: slide-out 0.4s linear 0.4s both;
+}
+
+.slide-out-4 {
+    animation: slide-out 0.4s linear 0.2s both;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+#home {
+    background-image: url('https://img.freepik.com/premium-photo/nature-wallpaper-beautiful-nature-wallpaper-4k-nature-wallpapers-hd-nature-wallpaper-green-nature_722194-215.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about {
+    background: red;
+}
+
+#contact {
+    background: green;
+}
+
+#references {
+    background: orange;
+}
